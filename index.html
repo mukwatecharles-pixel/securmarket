@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PrimeSecure Integrations (PSI) | Professional Security Systems</title>
+  <title>PrimeSecure Integrations (PSI) | Professional Security & Intercom Systems</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-slate-950 text-slate-100 font-sans antialiased min-h-screen flex flex-col">
@@ -38,8 +38,8 @@
   <!-- Hero Section -->
   <section class="py-16 px-6 text-center bg-gradient-to-b from-slate-900 to-slate-950 border-b border-slate-800">
     <div class="max-w-3xl mx-auto">
-      <span class="text-xs font-bold uppercase tracking-widest text-indigo-400 bg-indigo-950/80 px-3 py-1 rounded-full border border-indigo-800">Enterprise Grade Security & Networking</span>
-      <h1 class="text-4xl md:text-5xl font-extrabold mt-6 mb-4">Advanced Protection Engineered for Your Premises</h1>
+      <span class="text-xs font-bold uppercase tracking-widest text-indigo-400 bg-indigo-950/80 px-3 py-1 rounded-full border border-indigo-800">Enterprise Grade Security & Access Integration</span>
+      <h1 class="text-4xl md:text-5xl font-extrabold mt-6 mb-4">Advanced Protection & Integrated Gate Control</h1>
       <p class="text-slate-400 text-sm md:text-base mb-8">Browse our verified hardware catalog offline or log in to unlock direct consultation with our lead security professional, Chaloh.</p>
       
       <!-- Hidden Professional Contact Revealed Only When Logged In -->
@@ -47,7 +47,7 @@
         <p class="text-indigo-300 font-bold mb-1">🔒 Exclusive Professional Access Granted</p>
         <p class="text-slate-300">Lead Specialist: <strong class="text-white">Chaloh (PSI)</strong></p>
         <p class="text-amber-400 font-mono text-lg mt-1">📞 Direct Hotline: 0729692004</p>
-        <a href="https://wa.me/254729692004" target="_blank" class="inline-block mt-3 bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-4 py-2 rounded-lg text-xs transition">💬 Chat Instantly on WhatsApp</a>
+        <a href="https://api.whatsapp.com/send/?phone=254729692004&text&type=phone_number&app_absent=0" target="_blank" class="inline-block mt-3 bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-4 py-2 rounded-lg text-xs transition">💬 Chat Instantly on WhatsApp</a>
       </div>
     </div>
   </section>
@@ -60,6 +60,11 @@
         <div class="text-3xl mb-2">📷</div>
         <h3 class="font-bold text-lg">CCTV Surveillance Systems</h3>
         <p class="text-slate-400 text-xs mt-1">HD & 4K IP cameras with night vision, motion AI analytics, and remote mobile viewing setup.</p>
+      </div>
+      <div class="bg-slate-900 p-5 rounded-xl border border-slate-800">
+        <div class="text-3xl mb-2">💬</div>
+        <h3 class="font-bold text-lg">IP Intercoms & Gate Access Control</h3>
+        <p class="text-slate-400 text-xs mt-1">Video intercom door stations with built-in card readers and relay triggers to remotely open gates and doors.</p>
       </div>
       <div class="bg-slate-900 p-5 rounded-xl border border-slate-800">
         <div class="text-3xl mb-2">⏱️</div>
@@ -80,11 +85,6 @@
         <div class="text-3xl mb-2">⚡</div>
         <h3 class="font-bold text-lg">Electric Fencing</h3>
         <p class="text-slate-400 text-xs mt-1">High-voltage energizers, robust bracket installation, and reliable earthing systems.</p>
-      </div>
-      <div class="bg-slate-900 p-5 rounded-xl border border-slate-800">
-        <div class="text-3xl mb-2">🌐</div>
-        <h3 class="font-bold text-lg">Enterprise Networking</h3>
-        <p class="text-slate-400 text-xs mt-1">Structured LAN cabling, high-speed fiber links, and enterprise WiFi mesh coverage deployment.</p>
       </div>
     </div>
   </section>
@@ -122,8 +122,8 @@
   <div id="vendorModal" class="fixed inset-0 bg-black/80 hidden items-center justify-center z-50 p-4">
     <div class="bg-slate-900 border border-slate-800 p-6 rounded-2xl max-w-md w-full">
       <h3 class="text-xl font-bold mb-4 text-emerald-400">Add Item to PrimeSecure Store</h3>
-      <input type="text" id="vItemName" placeholder="Item Name (e.g. 4K Solar Camera)" class="w-full bg-slate-950 border border-slate-800 p-3 rounded-lg text-sm mb-3 text-white">
-      <input type="number" id="vItemPrice" placeholder="Price in Ksh (e.g. 15000)" class="w-full bg-slate-950 border border-slate-800 p-3 rounded-lg text-sm mb-3 text-white">
+      <input type="text" id="vItemName" placeholder="Item Name (e.g. Video Intercom with Gate Relay)" class="w-full bg-slate-950 border border-slate-800 p-3 rounded-lg text-sm mb-3 text-white">
+      <input type="number" id="vItemPrice" placeholder="Price in Ksh" class="w-full bg-slate-950 border border-slate-800 p-3 rounded-lg text-sm mb-3 text-white">
       <input type="text" id="vStoreName" placeholder="Your Store / Vendor Name" class="w-full bg-slate-950 border border-slate-800 p-3 rounded-lg text-sm mb-4 text-white">
       <button onclick="submitVendorItem()" class="bg-emerald-600 hover:bg-emerald-500 text-white w-full py-3 rounded-lg font-bold mb-2">Publish to Store</button>
       <button onclick="closeVendorModal()" class="text-slate-400 text-xs w-full py-2 hover:text-white">Cancel</button>
@@ -136,8 +136,9 @@
   </footer>
 
   <script>
-    // Initial 25% Markup Catalog
     let products = [
+      { name: "Hikvision IP Video Intercom & Gate Controller", price: 29990, category: "IP Intercoms & Access", vendor: "PrimeSecure PSI" },
+      { name: "Dahua Villa Door Station (Access Reader + Intercom)", price: 37500, category: "IP Intercoms & Access", vendor: "PrimeSecure PSI" },
       { name: "Hikvision 4K ColorVu Turret Camera", price: 11250, category: "CCTV", vendor: "PrimeSecure PSI" },
       { name: "ZKTeco Multi-Biometric Time Attendance", price: 24990, category: "Biometrics", vendor: "PrimeSecure PSI" },
       { name: "Centurion D5 Evo Sliding Gate Motor Kit", price: 74990, category: "Gate Motors", vendor: "PrimeSecure PSI" },
@@ -211,7 +212,6 @@
       alert(`Success! Your item has been listed in the PrimeSecure marketplace.`);
     }
 
-    // Initial load
     renderProducts();
   </script>
 </body>
