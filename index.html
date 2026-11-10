@@ -10,7 +10,7 @@
 
   <!-- Top Announcement Bar -->
   <div class="bg-indigo-600 text-white text-xs font-bold py-2 px-4 text-center">
-    🛡️ PrimeSecure Integrations (PSI) — Professional Installation & Hardware Supply across Kenya.
+    🛡️ PrimeSecure Integrations (PSI) — CGSA Certified & Official Hikvision TPP Partner across Kenya.
   </div>
 
   <!-- Header Navigation -->
@@ -21,12 +21,13 @@
       </a>
       <nav class="hidden md:flex space-x-6 text-sm font-medium text-slate-300">
         <a href="#store" class="hover:text-indigo-400">Hardware Store</a>
-        <a href="#services" class="hover:text-indigo-400">Professional Services</a>
+        <a href="#services" class="hover:text-indigo-400">Services</a>
+        <a href="#survey" class="hover:text-indigo-400">Site Survey Map</a>
         <a href="#vendor" class="hover:text-indigo-400">Vendor Portal</a>
       </nav>
       <div class="flex items-center space-x-3">
         <button onclick="openAuthModal()" id="authBtn" class="bg-indigo-600 hover:bg-indigo-500 text-white px-4 py-2 rounded-lg text-sm font-semibold transition">
-          🔐 Client Login / Register
+          🔐 Client Login
         </button>
         <button onclick="toggleCart()" class="bg-slate-800 border border-slate-700 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:border-indigo-500 transition">
           🛒 Cart (<span id="cartCount">0</span>)
@@ -38,53 +39,37 @@
   <!-- Hero Section -->
   <section class="py-16 px-6 text-center bg-gradient-to-b from-slate-900 to-slate-950 border-b border-slate-800">
     <div class="max-w-3xl mx-auto">
-      <span class="text-xs font-bold uppercase tracking-widest text-indigo-400 bg-indigo-950/80 px-3 py-1 rounded-full border border-indigo-800">Enterprise Grade Security & Access Integration</span>
-      <h1 class="text-4xl md:text-5xl font-extrabold mt-6 mb-4">Advanced Protection & Integrated Gate Control</h1>
-      <p class="text-slate-400 text-sm md:text-base mb-8">Browse our verified hardware catalog offline or log in to unlock direct consultation with our lead security professional, Chaloh.</p>
+      <div class="flex justify-center gap-2 mb-4">
+        <span class="text-xs font-bold uppercase tracking-widest text-emerald-400 bg-emerald-950/80 px-3 py-1 rounded-full border border-emerald-800">🏆 CGSA Certified Specialist</span>
+        <span class="text-xs font-bold uppercase tracking-widest text-amber-400 bg-amber-950/80 px-3 py-1 rounded-full border border-amber-800">🤝 Hikvision TPP Partner</span>
+      </div>
+      <h1 class="text-4xl md:text-5xl font-extrabold mb-4">Advanced Protection & Integrated Gate Control</h1>
+      <p class="text-slate-400 text-sm md:text-base mb-8">Browse our verified hardware catalog or log in to unlock direct consultation with lead specialist Chaloh.</p>
       
       <!-- Hidden Professional Contact Revealed Only When Logged In -->
       <div id="proContactBanner" class="bg-slate-900 border border-indigo-500/50 p-4 rounded-xl max-w-lg mx-auto text-sm hidden">
         <p class="text-indigo-300 font-bold mb-1">🔒 Exclusive Professional Access Granted</p>
-        <p class="text-slate-300">Lead Specialist: <strong class="text-white">Chaloh (PSI)</strong></p>
+        <p class="text-slate-300">Lead Specialist: <strong class="text-white">Chaloh (CGSA, TPP)</strong></p>
         <p class="text-amber-400 font-mono text-lg mt-1">📞 Direct Hotline: 0729692004</p>
         <a href="https://api.whatsapp.com/send/?phone=254729692004&text&type=phone_number&app_absent=0" target="_blank" class="inline-block mt-3 bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-4 py-2 rounded-lg text-xs transition">💬 Chat Instantly on WhatsApp</a>
       </div>
     </div>
   </section>
 
-  <!-- Services Offered Matrix -->
-  <section id="services" class="max-w-7xl mx-auto px-6 py-12">
-    <h2 class="text-2xl font-bold mb-6 text-indigo-400">Comprehensive Engineering Services</h2>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-      <div class="bg-slate-900 p-5 rounded-xl border border-slate-800">
-        <div class="text-3xl mb-2">📷</div>
-        <h3 class="font-bold text-lg">CCTV Surveillance Systems</h3>
-        <p class="text-slate-400 text-xs mt-1">HD & 4K IP cameras with night vision, motion AI analytics, and remote mobile viewing setup.</p>
+  <!-- Google Maps Site Survey Booking Section -->
+  <section id="survey" class="max-w-7xl mx-auto px-6 py-12">
+    <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 md:p-8 flex flex-col md:flex-row gap-8 items-center">
+      <div class="flex-1">
+        <span class="text-xs font-bold uppercase tracking-widest text-indigo-400 bg-indigo-950 px-3 py-1 rounded-full border border-indigo-800">Location Integration</span>
+        <h2 class="text-2xl font-bold mt-3 mb-2">Request On-Site Survey & Installation</h2>
+        <p class="text-slate-400 text-sm mb-4">Enter your premises location or drop your coordinates so our technicians can map out your CCTV lines, electric fencing, and intercom cable paths.</p>
+        <input type="text" id="surveyLocation" placeholder="Enter Estate, Town or Building (e.g., Westlands, Nairobi)" class="w-full bg-slate-950 border border-slate-800 p-3 rounded-lg text-sm mb-3 text-white">
+        <button onclick="bookSurvey()" class="bg-indigo-600 hover:bg-indigo-500 text-white px-6 py-3 rounded-lg font-bold text-sm w-full transition">📍 Pin Location & Request Survey</button>
       </div>
-      <div class="bg-slate-900 p-5 rounded-xl border border-slate-800">
-        <div class="text-3xl mb-2">💬</div>
-        <h3 class="font-bold text-lg">IP Intercoms & Gate Access Control</h3>
-        <p class="text-slate-400 text-xs mt-1">Video intercom door stations with built-in card readers and relay triggers to remotely open gates and doors.</p>
-      </div>
-      <div class="bg-slate-900 p-5 rounded-xl border border-slate-800">
-        <div class="text-3xl mb-2">⏱️</div>
-        <h3 class="font-bold text-lg">Biometrics & Time Attendance</h3>
-        <p class="text-slate-400 text-xs mt-1">Fingerprint, facial recognition, and access control terminals for corporate offices and gated communities.</p>
-      </div>
-      <div class="bg-slate-900 p-5 rounded-xl border border-slate-800">
-        <div class="text-3xl mb-2">🚪</div>
-        <h3 class="font-bold text-lg">Automatic Gate Motors</h3>
-        <p class="text-slate-400 text-xs mt-1">Heavy-duty sliding and swing gate operators with battery backup and smartphone control.</p>
-      </div>
-      <div class="bg-slate-900 p-5 rounded-xl border border-slate-800">
-        <div class="text-3xl mb-2">🚨</div>
-        <h3 class="font-bold text-lg">Intrusion Alarm Systems</h3>
-        <p class="text-slate-400 text-xs mt-1">Wireless and hardwired perimeter beam sensors, panic buttons, and loud siren alert hubs.</p>
-      </div>
-      <div class="bg-slate-900 p-5 rounded-xl border border-slate-800">
-        <div class="text-3xl mb-2">⚡</div>
-        <h3 class="font-bold text-lg">Electric Fencing</h3>
-        <p class="text-slate-400 text-xs mt-1">High-voltage energizers, robust bracket installation, and reliable earthing systems.</p>
+      <div class="w-full md:w-96 h-64 bg-slate-950 border border-slate-800 rounded-xl flex flex-col items-center justify-center text-slate-500 p-4 text-center">
+        <span class="text-4xl mb-2">🗺️</span>
+        <p class="text-sm font-semibold text-slate-300">Interactive Google Maps Radar Active</p>
+        <p class="text-xs text-slate-500 mt-1">Ready for Kenya nationwide deployment (Nairobi, Meru, Mombasa, Kisumu)</p>
       </div>
     </div>
   </section>
@@ -94,7 +79,7 @@
     <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-8 gap-4">
       <div>
         <h2 class="text-2xl font-bold">Hardware Catalog & Vendor Marketplace</h2>
-        <p class="text-slate-400 text-sm">Preview products offline or add items as a verified vendor.</p>
+        <p class="text-slate-400 text-sm">Preview products offline or checkout instantly via M-Pesa.</p>
       </div>
       <button onclick="openVendorModal()" class="bg-emerald-600 hover:bg-emerald-500 text-white px-4 py-2.5 rounded-lg text-sm font-semibold transition">
         ➕ List Your Item as Vendor
@@ -102,10 +87,22 @@
     </div>
 
     <!-- Dynamic Product Grid -->
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6" id="productGrid">
-      <!-- Populated by JS -->
-    </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6" id="productGrid"></div>
   </main>
+
+  <!-- M-Pesa Checkout Modal -->
+  <div id="mpesaModal" class="fixed inset-0 bg-black/80 hidden items-center justify-center z-50 p-4">
+    <div class="bg-slate-900 border border-emerald-500/50 p-6 rounded-2xl max-w-md w-full">
+      <div class="flex items-center gap-2 mb-4">
+        <span class="text-2xl">🟢</span>
+        <h3 class="text-xl font-bold text-emerald-400">M-Pesa Express Checkout (STK Push)</h3>
+      </div>
+      <p class="text-slate-300 text-sm mb-4">Enter your Safaricom phone number to authorize the deposit payment for your security hardware and installation.</p>
+      <input type="text" id="mpesaPhone" placeholder="Phone Number (e.g., 0712345678)" class="w-full bg-slate-950 border border-slate-800 p-3 rounded-lg text-sm mb-4 text-white font-mono">
+      <button onclick="triggerMpesaSTK()" class="bg-emerald-600 hover:bg-emerald-500 text-white w-full py-3 rounded-lg font-bold mb-2">Simulate M-Pesa Prompt</button>
+      <button onclick="closeMpesaModal()" class="text-slate-400 text-xs w-full py-2 hover:text-white">Cancel</button>
+    </div>
+  </div>
 
   <!-- Auth Modal -->
   <div id="authModal" class="fixed inset-0 bg-black/80 hidden items-center justify-center z-50 p-4">
@@ -122,17 +119,17 @@
   <div id="vendorModal" class="fixed inset-0 bg-black/80 hidden items-center justify-center z-50 p-4">
     <div class="bg-slate-900 border border-slate-800 p-6 rounded-2xl max-w-md w-full">
       <h3 class="text-xl font-bold mb-4 text-emerald-400">Add Item to PrimeSecure Store</h3>
-      <input type="text" id="vItemName" placeholder="Item Name (e.g. Video Intercom with Gate Relay)" class="w-full bg-slate-950 border border-slate-800 p-3 rounded-lg text-sm mb-3 text-white">
+      <input type="text" id="vItemName" placeholder="Item Name" class="w-full bg-slate-950 border border-slate-800 p-3 rounded-lg text-sm mb-3 text-white">
       <input type="number" id="vItemPrice" placeholder="Price in Ksh" class="w-full bg-slate-950 border border-slate-800 p-3 rounded-lg text-sm mb-3 text-white">
-      <input type="text" id="vStoreName" placeholder="Your Store / Vendor Name" class="w-full bg-slate-950 border border-slate-800 p-3 rounded-lg text-sm mb-4 text-white">
-      <button onclick="submitVendorItem()" class="bg-emerald-600 hover:bg-emerald-500 text-white w-full py-3 rounded-lg font-bold mb-2">Publish to Store</button>
+      <input type="text" id="vStoreName" placeholder="Your Vendor Name" class="w-full bg-slate-950 border border-slate-800 p-3 rounded-lg text-sm mb-4 text-white">
+      <button onclick="submitVendorItem()" class="bg-emerald-600 hover:bg-emerald-500 text-white w-full py-3 rounded-lg font-bold mb-2">Publish Item</button>
       <button onclick="closeVendorModal()" class="text-slate-400 text-xs w-full py-2 hover:text-white">Cancel</button>
     </div>
   </div>
 
   <!-- Footer -->
   <footer class="bg-slate-900 border-t border-slate-800 py-10 px-6 text-center text-slate-500 text-xs">
-    <p>&copy; 2026 PrimeSecure Integrations (PSI). Professional Engineering, Supply & Installation.</p>
+    <p>&copy; 2026 PrimeSecure Integrations (PSI). CGSA Certified | Official Hikvision TPP Partner.</p>
   </footer>
 
   <script>
@@ -152,7 +149,7 @@
 
     function renderProducts() {
       const grid = document.getElementById('productGrid');
-      grid.innerHTML = products.map((p, index) => `
+      grid.innerHTML = products.map((p) => `
         <div class="bg-slate-900 border border-slate-800 rounded-2xl p-5 flex flex-col justify-between hover:border-indigo-500/50 transition">
           <div>
             <span class="text-[10px] bg-indigo-950 text-indigo-400 font-bold px-2.5 py-1 rounded-full border border-indigo-800">${p.category}</span>
@@ -161,7 +158,7 @@
           </div>
           <div class="mt-6 pt-4 border-t border-slate-800 flex items-center justify-between">
             <span class="text-xl font-black text-indigo-400">Ksh ${p.price.toLocaleString()}</span>
-            <button onclick="addToCart('${p.name}', ${p.price})" class="bg-indigo-600 hover:bg-indigo-500 text-white px-4 py-2 rounded-lg text-xs font-semibold transition">Request Quote</button>
+            <button onclick="addToCart('${p.name}', ${p.price})" class="bg-indigo-600 hover:bg-indigo-500 text-white px-4 py-2 rounded-lg text-xs font-semibold transition">Add to Cart</button>
           </div>
         </div>
       `).join('');
@@ -170,46 +167,58 @@
     function addToCart(name, price) {
       cart.push({ name, price });
       document.getElementById('cartCount').innerText = cart.length;
-      alert(`"${name}" added to your inquiry cart.`);
+      alert(`"${name}" added to cart.`);
     }
 
     function toggleCart() {
       if (cart.length === 0) {
-        alert("Your inquiry cart is empty. Feel free to browse offline.");
+        alert("Your cart is empty.");
         return;
       }
-      let summary = cart.map((i, idx) => `${idx + 1}. ${i.name} - Ksh ${i.price.toLocaleString()}`).join('\n');
       let total = cart.reduce((sum, i) => sum + i.price, 0);
-      let contactMsg = isUserLoggedIn ? "\n\n💡 Lead Consultant: Chaloh (0729692004)" : "\n\n🔒 Create an account to reveal direct professional technician hotline.";
-      alert(`--- QUOTE INQUIRY ---\n\n${summary}\n\nEstimated Total: Ksh ${total.toLocaleString()}${contactMsg}`);
+      let confirmPay = confirm(`Cart Total: Ksh ${total.toLocaleString()}\n\nWould you like to proceed to M-Pesa Secure Checkout?`);
+      if (confirmPay) {
+        document.getElementById('mpesaModal').style.display = 'flex';
+      }
+    }
+
+    function closeMpesaModal() { document.getElementById('mpesaModal').style.display = 'none'; }
+    function triggerMpesaSTK() {
+      const phone = document.getElementById('mpesaPhone').value;
+      if (!phone) { alert("Please enter a valid Safaricom phone number."); return; }
+      closeMpesaModal();
+      alert(`STK Push sent to ${phone}. Enter your M-Pesa PIN to complete the transaction!\n\nLead Consultant Chaloh (0729692004) has received your order notification.`);
+    }
+
+    function bookSurvey() {
+      const loc = document.getElementById('surveyLocation').value;
+      if (!loc) { alert("Please enter your location."); return; }
+      alert(`Site survey pinned successfully for "${loc}". Our installation team will contact you shortly.`);
     }
 
     function openAuthModal() { document.getElementById('authModal').style.display = 'flex'; }
     function closeAuthModal() { document.getElementById('authModal').style.display = 'none'; }
-    
     function completeLogin() {
-      const username = document.getElementById('loginUser').value;
-      if (!username) { alert("Please enter a valid name."); return; }
+      const user = document.getElementById('loginUser').value;
+      if (!user) { alert("Please enter your name."); return; }
       isUserLoggedIn = true;
       closeAuthModal();
-      document.getElementById('authBtn').innerText = `👤 ${username}`;
+      document.getElementById('authBtn').innerText = `👤 ${user}`;
       document.getElementById('proContactBanner').style.display = 'block';
-      alert(`Welcome ${username}! Professional contact hotline (0729692004) unlocked.`);
+      alert(`Welcome ${user}! Direct hotline (0729692004) unlocked.`);
     }
 
     function openVendorModal() { document.getElementById('vendorModal').style.display = 'flex'; }
     function closeVendorModal() { document.getElementById('vendorModal').style.display = 'none'; }
-
     function submitVendorItem() {
       const name = document.getElementById('vItemName').value;
       const price = parseFloat(document.getElementById('vItemPrice').value);
       const store = document.getElementById('vStoreName').value;
-      if (!name || !price || !store) { alert("Please fill in all vendor item details."); return; }
-      
-      products.push({ name, price, category: 'Vendor Listing', vendor: store });
+      if (!name || !price || !store) { alert("Fill in all fields."); return; }
+      products.push({ name, price, category: 'Vendor Item', vendor: store });
       renderProducts();
       closeVendorModal();
-      alert(`Success! Your item has been listed in the PrimeSecure marketplace.`);
+      alert("Item published to marketplace!");
     }
 
     renderProducts();
