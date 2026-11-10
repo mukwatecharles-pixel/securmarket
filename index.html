@@ -3,144 +3,216 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SecurMarket | Security Systems & Hardware</title>
+  <title>PrimeSecure Integrations (PSI) | Professional Security Systems</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gray-50 text-gray-800 font-sans antialiased min-h-screen flex flex-col">
+<body class="bg-slate-950 text-slate-100 font-sans antialiased min-h-screen flex flex-col">
 
-  <!-- Top Banner -->
-  <div class="bg-amber-500 text-slate-950 text-xs font-bold py-1.5 px-4 text-center">
-    🛡️ Free Express Delivery on All Security Camera Kits & Biometric Locks Over $150!
+  <!-- Top Announcement Bar -->
+  <div class="bg-indigo-600 text-white text-xs font-bold py-2 px-4 text-center">
+    🛡️ PrimeSecure Integrations (PSI) — Professional Installation & Hardware Supply across Kenya.
   </div>
 
   <!-- Header Navigation -->
-  <header class="bg-white border-b border-gray-200 sticky top-0 z-40 shadow-sm">
-    <div class="max-w-7xl mx-auto px-4 h-20 flex items-center justify-between gap-4">
-      
-      <!-- Brand Logo -->
-      <a href="#" class="text-2xl font-black tracking-tight text-amber-600 flex items-center gap-1">
-        <span>🛡️ SecurMarket</span>
+  <header class="bg-slate-900 border-b border-slate-800 sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+      <a href="#" class="text-xl font-black tracking-wider text-indigo-400">
+        🛡️ PRIMESECURE <span class="text-xs font-normal text-slate-400 block">PSI Integrations</span>
       </a>
-
-      <!-- Search Bar -->
-      <div class="flex-1 max-w-xl hidden md:flex">
-        <input type="text" placeholder="Search CCTV, smart locks, alarms, safes..." class="w-full bg-gray-100 border border-gray-300 rounded-l-lg px-4 py-2.5 text-sm focus:outline-none focus:border-amber-500">
-        <button class="bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold px-6 rounded-r-lg text-sm transition">Search</button>
-      </div>
-
-      <!-- Cart Action -->
-      <div class="flex items-center gap-4">
-        <button onclick="toggleCart()" class="flex items-center gap-2 bg-slate-900 text-white px-4 py-2.5 rounded-lg text-sm font-semibold hover:bg-slate-800 transition">
+      <nav class="hidden md:flex space-x-6 text-sm font-medium text-slate-300">
+        <a href="#store" class="hover:text-indigo-400">Hardware Store</a>
+        <a href="#services" class="hover:text-indigo-400">Professional Services</a>
+        <a href="#vendor" class="hover:text-indigo-400">Vendor Portal</a>
+      </nav>
+      <div class="flex items-center space-x-3">
+        <button onclick="openAuthModal()" id="authBtn" class="bg-indigo-600 hover:bg-indigo-500 text-white px-4 py-2 rounded-lg text-sm font-semibold transition">
+          🔐 Client Login / Register
+        </button>
+        <button onclick="toggleCart()" class="bg-slate-800 border border-slate-700 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:border-indigo-500 transition">
           🛒 Cart (<span id="cartCount">0</span>)
         </button>
       </div>
     </div>
   </header>
 
-  <!-- Categories Bar -->
-  <nav class="bg-slate-900 text-white text-sm py-3 px-4 shadow-inner">
-    <div class="max-w-7xl mx-auto flex gap-8 overflow-x-auto whitespace-nowrap">
-      <a href="#products" class="text-amber-400 font-semibold">All Hardware</a>
-      <a href="#products" class="hover:text-amber-400 transition">CCTV Cameras</a>
-      <a href="#products" class="hover:text-amber-400 transition">Biometric Locks</a>
-      <a href="#products" class="hover:text-amber-400 transition">Intrusion Alarms</a>
-      <a href="#products" class="hover:text-amber-400 transition">Security Safes</a>
-      <a href="#products" class="hover:text-amber-400 transition">Professional Installation</a>
-    </div>
-  </nav>
-
-  <!-- Main Storefront Content -->
-  <main class="max-w-7xl mx-auto px-4 py-8 flex-grow" id="products">
-    
-    <div class="flex justify-between items-center mb-6">
-      <h2 class="text-xl font-bold text-slate-900">Featured Security Products</h2>
-      <span class="text-sm text-gray-500">Verified Quality & Warranty</span>
-    </div>
-
-    <!-- Product Grid -->
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+  <!-- Hero Section -->
+  <section class="py-16 px-6 text-center bg-gradient-to-b from-slate-900 to-slate-950 border-b border-slate-800">
+    <div class="max-w-3xl mx-auto">
+      <span class="text-xs font-bold uppercase tracking-widest text-indigo-400 bg-indigo-950/80 px-3 py-1 rounded-full border border-indigo-800">Enterprise Grade Security & Networking</span>
+      <h1 class="text-4xl md:text-5xl font-extrabold mt-6 mb-4">Advanced Protection Engineered for Your Premises</h1>
+      <p class="text-slate-400 text-sm md:text-base mb-8">Browse our verified hardware catalog offline or log in to unlock direct consultation with our lead security professional, Chaloh.</p>
       
-      <!-- Item 1 -->
-      <div class="bg-white border border-gray-200 rounded-xl p-4 flex flex-col justify-between shadow-sm hover:shadow-md transition">
-        <div>
-          <div class="bg-gray-100 h-40 rounded-lg flex items-center justify-center text-4xl mb-4">📷</div>
-          <span class="text-[10px] bg-amber-100 text-amber-800 font-bold px-2 py-0.5 rounded">Best Seller</span>
-          <h3 class="font-bold text-slate-900 mt-2 text-sm leading-snug">4K Ultra HD AI Security Camera Kit (4 Cameras)</h3>
-          <p class="text-xs text-gray-500 mt-1">Night vision, human detection, 1TB NVR.</p>
-        </div>
-        <div class="mt-4 pt-3 border-t border-gray-100 flex items-center justify-between">
-          <span class="text-lg font-black text-amber-600">$349.00</span>
-          <button onclick="addToCart('4K Ultra HD Security Kit', 349)" class="bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold px-3 py-1.5 rounded-lg text-xs transition">Buy Now</button>
-        </div>
+      <!-- Hidden Professional Contact Revealed Only When Logged In -->
+      <div id="proContactBanner" class="bg-slate-900 border border-indigo-500/50 p-4 rounded-xl max-w-lg mx-auto text-sm hidden">
+        <p class="text-indigo-300 font-bold mb-1">🔒 Exclusive Professional Access Granted</p>
+        <p class="text-slate-300">Lead Specialist: <strong class="text-white">Chaloh (PSI)</strong></p>
+        <p class="text-amber-400 font-mono text-lg mt-1">📞 Direct Hotline: 0729692004</p>
+        <a href="https://wa.me/254729692004" target="_blank" class="inline-block mt-3 bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-4 py-2 rounded-lg text-xs transition">💬 Chat Instantly on WhatsApp</a>
       </div>
+    </div>
+  </section>
 
-      <!-- Item 2 -->
-      <div class="bg-white border border-gray-200 rounded-xl p-4 flex flex-col justify-between shadow-sm hover:shadow-md transition">
-        <div>
-          <div class="bg-gray-100 h-40 rounded-lg flex items-center justify-center text-4xl mb-4">🔐</div>
-          <span class="text-[10px] bg-blue-100 text-blue-800 font-bold px-2 py-0.5 rounded">Top Rated</span>
-          <h3 class="font-bold text-slate-900 mt-2 text-sm leading-snug">Biometric Smart Deadbolt Fingerprint Lock</h3>
-          <p class="text-xs text-gray-500 mt-1">App remote unlock & RFID keys.</p>
-        </div>
-        <div class="mt-4 pt-3 border-t border-gray-100 flex items-center justify-between">
-          <span class="text-lg font-black text-amber-600">$189.00</span>
-          <button onclick="addToCart('Biometric Smart Deadbolt Lock', 189)" class="bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold px-3 py-1.5 rounded-lg text-xs transition">Buy Now</button>
-        </div>
+  <!-- Services Offered Matrix -->
+  <section id="services" class="max-w-7xl mx-auto px-6 py-12">
+    <h2 class="text-2xl font-bold mb-6 text-indigo-400">Comprehensive Engineering Services</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="bg-slate-900 p-5 rounded-xl border border-slate-800">
+        <div class="text-3xl mb-2">📷</div>
+        <h3 class="font-bold text-lg">CCTV Surveillance Systems</h3>
+        <p class="text-slate-400 text-xs mt-1">HD & 4K IP cameras with night vision, motion AI analytics, and remote mobile viewing setup.</p>
       </div>
-
-      <!-- Item 3 -->
-      <div class="bg-white border border-gray-200 rounded-xl p-4 flex flex-col justify-between shadow-sm hover:shadow-md transition">
-        <div>
-          <div class="bg-gray-100 h-40 rounded-lg flex items-center justify-center text-4xl mb-4">🚨</div>
-          <span class="text-[10px] bg-green-100 text-green-800 font-bold px-2 py-0.5 rounded">In Stock</span>
-          <h3 class="font-bold text-slate-900 mt-2 text-sm leading-snug">Wireless Smart Alarm System Hub</h3>
-          <p class="text-xs text-gray-500 mt-1">Motion sensors & 110dB siren.</p>
-        </div>
-        <div class="mt-4 pt-3 border-t border-gray-100 flex items-center justify-between">
-          <span class="text-lg font-black text-amber-600">$229.00</span>
-          <button onclick="addToCart('Wireless Smart Alarm System Hub', 229)" class="bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold px-3 py-1.5 rounded-lg text-xs transition">Buy Now</button>
-        </div>
+      <div class="bg-slate-900 p-5 rounded-xl border border-slate-800">
+        <div class="text-3xl mb-2">⏱️</div>
+        <h3 class="font-bold text-lg">Biometrics & Time Attendance</h3>
+        <p class="text-slate-400 text-xs mt-1">Fingerprint, facial recognition, and access control terminals for corporate offices and gated communities.</p>
       </div>
-
-      <!-- Item 4 -->
-      <div class="bg-white border border-gray-200 rounded-xl p-4 flex flex-col justify-between shadow-sm hover:shadow-md transition">
-        <div>
-          <div class="bg-gray-100 h-40 rounded-lg flex items-center justify-center text-4xl mb-4">💼</div>
-          <span class="text-[10px] bg-purple-100 text-purple-800 font-bold px-2 py-0.5 rounded">Heavy Duty</span>
-          <h3 class="font-bold text-slate-900 mt-2 text-sm leading-snug">Fireproof Digital Security Safe Box</h3>
-          <p class="text-xs text-gray-500 mt-1">Digital keypad & emergency keys.</p>
-        </div>
-        <div class="mt-4 pt-3 border-t border-gray-100 flex items-center justify-between">
-          <span class="text-lg font-black text-amber-600">$149.00</span>
-          <button onclick="addToCart('Fireproof Digital Security Safe Box', 149)" class="bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold px-3 py-1.5 rounded-lg text-xs transition">Buy Now</button>
-        </div>
+      <div class="bg-slate-900 p-5 rounded-xl border border-slate-800">
+        <div class="text-3xl mb-2">🚪</div>
+        <h3 class="font-bold text-lg">Automatic Gate Motors</h3>
+        <p class="text-slate-400 text-xs mt-1">Heavy-duty sliding and swing gate operators with battery backup and smartphone control.</p>
       </div>
+      <div class="bg-slate-900 p-5 rounded-xl border border-slate-800">
+        <div class="text-3xl mb-2">🚨</div>
+        <h3 class="font-bold text-lg">Intrusion Alarm Systems</h3>
+        <p class="text-slate-400 text-xs mt-1">Wireless and hardwired perimeter beam sensors, panic buttons, and loud siren alert hubs.</p>
+      </div>
+      <div class="bg-slate-900 p-5 rounded-xl border border-slate-800">
+        <div class="text-3xl mb-2">⚡</div>
+        <h3 class="font-bold text-lg">Electric Fencing</h3>
+        <p class="text-slate-400 text-xs mt-1">High-voltage energizers, robust bracket installation, and reliable earthing systems.</p>
+      </div>
+      <div class="bg-slate-900 p-5 rounded-xl border border-slate-800">
+        <div class="text-3xl mb-2">🌐</div>
+        <h3 class="font-bold text-lg">Enterprise Networking</h3>
+        <p class="text-slate-400 text-xs mt-1">Structured LAN cabling, high-speed fiber links, and enterprise WiFi mesh coverage deployment.</p>
+      </div>
+    </div>
+  </section>
 
+  <!-- Hardware Store Section -->
+  <main id="store" class="max-w-7xl mx-auto px-6 py-12 flex-grow">
+    <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-8 gap-4">
+      <div>
+        <h2 class="text-2xl font-bold">Hardware Catalog & Vendor Marketplace</h2>
+        <p class="text-slate-400 text-sm">Preview products offline or add items as a verified vendor.</p>
+      </div>
+      <button onclick="openVendorModal()" class="bg-emerald-600 hover:bg-emerald-500 text-white px-4 py-2.5 rounded-lg text-sm font-semibold transition">
+        ➕ List Your Item as Vendor
+      </button>
+    </div>
+
+    <!-- Dynamic Product Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6" id="productGrid">
+      <!-- Populated by JS -->
     </div>
   </main>
 
+  <!-- Auth Modal -->
+  <div id="authModal" class="fixed inset-0 bg-black/80 hidden items-center justify-center z-50 p-4">
+    <div class="bg-slate-900 border border-slate-800 p-6 rounded-2xl max-w-md w-full">
+      <h3 class="text-xl font-bold mb-4 text-indigo-400">Client Portal Authentication</h3>
+      <input type="text" id="loginUser" placeholder="Enter your name or business handle" class="w-full bg-slate-950 border border-slate-800 p-3 rounded-lg text-sm mb-3 text-white">
+      <input type="password" placeholder="Enter secure password" class="w-full bg-slate-950 border border-slate-800 p-3 rounded-lg text-sm mb-4 text-white">
+      <button onclick="completeLogin()" class="bg-indigo-600 hover:bg-indigo-500 text-white w-full py-3 rounded-lg font-bold mb-2">Access Professional Account & Hotline</button>
+      <button onclick="closeAuthModal()" class="text-slate-400 text-xs w-full py-2 hover:text-white">Cancel</button>
+    </div>
+  </div>
+
+  <!-- Vendor Listing Modal -->
+  <div id="vendorModal" class="fixed inset-0 bg-black/80 hidden items-center justify-center z-50 p-4">
+    <div class="bg-slate-900 border border-slate-800 p-6 rounded-2xl max-w-md w-full">
+      <h3 class="text-xl font-bold mb-4 text-emerald-400">Add Item to PrimeSecure Store</h3>
+      <input type="text" id="vItemName" placeholder="Item Name (e.g. 4K Solar Camera)" class="w-full bg-slate-950 border border-slate-800 p-3 rounded-lg text-sm mb-3 text-white">
+      <input type="number" id="vItemPrice" placeholder="Price in Ksh (e.g. 15000)" class="w-full bg-slate-950 border border-slate-800 p-3 rounded-lg text-sm mb-3 text-white">
+      <input type="text" id="vStoreName" placeholder="Your Store / Vendor Name" class="w-full bg-slate-950 border border-slate-800 p-3 rounded-lg text-sm mb-4 text-white">
+      <button onclick="submitVendorItem()" class="bg-emerald-600 hover:bg-emerald-500 text-white w-full py-3 rounded-lg font-bold mb-2">Publish to Store</button>
+      <button onclick="closeVendorModal()" class="text-slate-400 text-xs w-full py-2 hover:text-white">Cancel</button>
+    </div>
+  </div>
+
   <!-- Footer -->
-  <footer class="bg-slate-900 text-gray-400 py-10 px-4 text-center text-xs">
-    <p>&copy; 2026 SecurMarket E-Commerce. Fast delivery & secure payment options available.</p>
+  <footer class="bg-slate-900 border-t border-slate-800 py-10 px-6 text-center text-slate-500 text-xs">
+    <p>&copy; 2026 PrimeSecure Integrations (PSI). Professional Engineering, Supply & Installation.</p>
   </footer>
 
   <script>
+    // Initial 25% Markup Catalog
+    let products = [
+      { name: "Hikvision 4K ColorVu Turret Camera", price: 11250, category: "CCTV", vendor: "PrimeSecure PSI" },
+      { name: "ZKTeco Multi-Biometric Time Attendance", price: 24990, category: "Biometrics", vendor: "PrimeSecure PSI" },
+      { name: "Centurion D5 Evo Sliding Gate Motor Kit", price: 74990, category: "Gate Motors", vendor: "PrimeSecure PSI" },
+      { name: "Paradox Spectra SP4000 Alarm Panel Kit", price: 22500, category: "Alarms", vendor: "PrimeSecure PSI" },
+      { name: "Heavy Duty Electric Fence Energizer", price: 31250, category: "Electric Fencing", vendor: "PrimeSecure PSI" },
+      { name: "Ubiquiti UniFi 6 Enterprise Access Point", price: 27490, category: "Networking", vendor: "PrimeSecure PSI" }
+    ];
+
     let cart = [];
+    let isUserLoggedIn = false;
+
+    function renderProducts() {
+      const grid = document.getElementById('productGrid');
+      grid.innerHTML = products.map((p, index) => `
+        <div class="bg-slate-900 border border-slate-800 rounded-2xl p-5 flex flex-col justify-between hover:border-indigo-500/50 transition">
+          <div>
+            <span class="text-[10px] bg-indigo-950 text-indigo-400 font-bold px-2.5 py-1 rounded-full border border-indigo-800">${p.category}</span>
+            <h3 class="font-bold text-lg mt-3 text-white">${p.name}</h3>
+            <p class="text-xs text-slate-400 mt-1">Vendor: <span class="text-slate-200">${p.vendor}</span></p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-slate-800 flex items-center justify-between">
+            <span class="text-xl font-black text-indigo-400">Ksh ${p.price.toLocaleString()}</span>
+            <button onclick="addToCart('${p.name}', ${p.price})" class="bg-indigo-600 hover:bg-indigo-500 text-white px-4 py-2 rounded-lg text-xs font-semibold transition">Request Quote</button>
+          </div>
+        </div>
+      `).join('');
+    }
+
     function addToCart(name, price) {
       cart.push({ name, price });
       document.getElementById('cartCount').innerText = cart.length;
-      alert(`Successfully added "${name}" to your cart!`);
+      alert(`"${name}" added to your inquiry cart.`);
     }
+
     function toggleCart() {
       if (cart.length === 0) {
-        alert("Your shopping cart is currently empty.");
+        alert("Your inquiry cart is empty. Feel free to browse offline.");
         return;
       }
-      let summary = cart.map((item, index) => `${index + 1}. ${item.name} - $${item.price}`).join('\n');
-      let total = cart.reduce((sum, item) => sum + item.price, 0);
-      alert(`--- SHOPPING CART ---\n\n${summary}\n\nTotal: $${total}.00\n\nReady for secure checkout!`);
+      let summary = cart.map((i, idx) => `${idx + 1}. ${i.name} - Ksh ${i.price.toLocaleString()}`).join('\n');
+      let total = cart.reduce((sum, i) => sum + i.price, 0);
+      let contactMsg = isUserLoggedIn ? "\n\n💡 Lead Consultant: Chaloh (0729692004)" : "\n\n🔒 Create an account to reveal direct professional technician hotline.";
+      alert(`--- QUOTE INQUIRY ---\n\n${summary}\n\nEstimated Total: Ksh ${total.toLocaleString()}${contactMsg}`);
     }
-  </script>
 
+    function openAuthModal() { document.getElementById('authModal').style.display = 'flex'; }
+    function closeAuthModal() { document.getElementById('authModal').style.display = 'none'; }
+    
+    function completeLogin() {
+      const username = document.getElementById('loginUser').value;
+      if (!username) { alert("Please enter a valid name."); return; }
+      isUserLoggedIn = true;
+      closeAuthModal();
+      document.getElementById('authBtn').innerText = `👤 ${username}`;
+      document.getElementById('proContactBanner').style.display = 'block';
+      alert(`Welcome ${username}! Professional contact hotline (0729692004) unlocked.`);
+    }
+
+    function openVendorModal() { document.getElementById('vendorModal').style.display = 'flex'; }
+    function closeVendorModal() { document.getElementById('vendorModal').style.display = 'none'; }
+
+    function submitVendorItem() {
+      const name = document.getElementById('vItemName').value;
+      const price = parseFloat(document.getElementById('vItemPrice').value);
+      const store = document.getElementById('vStoreName').value;
+      if (!name || !price || !store) { alert("Please fill in all vendor item details."); return; }
+      
+      products.push({ name, price, category: 'Vendor Listing', vendor: store });
+      renderProducts();
+      closeVendorModal();
+      alert(`Success! Your item has been listed in the PrimeSecure marketplace.`);
+    }
+
+    // Initial load
+    renderProducts();
+  </script>
 </body>
 </html>
