@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SecurMarket | Security Systems & Hardware</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans antialiased min-h-screen flex flex-col">
+
+  <!-- Top Banner -->
+  <div class="bg-amber-500 text-slate-950 text-xs font-bold py-1.5 px-4 text-center">
+    🛡️ Free Express Delivery on All Security Camera Kits & Biometric Locks Over $150!
+  </div>
+
+  <!-- Header Navigation -->
+  <header class="bg-white border-b border-gray-200 sticky top-0 z-40 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 h-20 flex items-center justify-between gap-4">
+      
+      <!-- Brand Logo -->
+      <a href="#" class="text-2xl font-black tracking-tight text-amber-600 flex items-center gap-1">
+        <span>🛡️ SecurMarket</span>
+      </a>
+
+      <!-- Search Bar -->
+      <div class="flex-1 max-w-xl hidden md:flex">
+        <input type="text" placeholder="Search CCTV, smart locks, alarms, safes..." class="w-full bg-gray-100 border border-gray-300 rounded-l-lg px-4 py-2.5 text-sm focus:outline-none focus:border-amber-500">
+        <button class="bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold px-6 rounded-r-lg text-sm transition">Search</button>
+      </div>
+
+      <!-- Cart Action -->
+      <div class="flex items-center gap-4">
+        <button onclick="toggleCart()" class="flex items-center gap-2 bg-slate-900 text-white px-4 py-2.5 rounded-lg text-sm font-semibold hover:bg-slate-800 transition">
+          🛒 Cart (<span id="cartCount">0</span>)
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Categories Bar -->
+  <nav class="bg-slate-900 text-white text-sm py-3 px-4 shadow-inner">
+    <div class="max-w-7xl mx-auto flex gap-8 overflow-x-auto whitespace-nowrap">
+      <a href="#products" class="text-amber-400 font-semibold">All Hardware</a>
+      <a href="#products" class="hover:text-amber-400 transition">CCTV Cameras</a>
+      <a href="#products" class="hover:text-amber-400 transition">Biometric Locks</a>
+      <a href="#products" class="hover:text-amber-400 transition">Intrusion Alarms</a>
+      <a href="#products" class="hover:text-amber-400 transition">Security Safes</a>
+      <a href="#products" class="hover:text-amber-400 transition">Professional Installation</a>
+    </div>
+  </nav>
+
+  <!-- Main Storefront Content -->
+  <main class="max-w-7xl mx-auto px-4 py-8 flex-grow" id="products">
+    
+    <div class="flex justify-between items-center mb-6">
+      <h2 class="text-xl font-bold text-slate-900">Featured Security Products</h2>
+      <span class="text-sm text-gray-500">Verified Quality & Warranty</span>
+    </div>
+
+    <!-- Product Grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+      
+      <!-- Item 1 -->
+      <div class="bg-white border border-gray-200 rounded-xl p-4 flex flex-col justify-between shadow-sm hover:shadow-md transition">
+        <div>
+          <div class="bg-gray-100 h-40 rounded-lg flex items-center justify-center text-4xl mb-4">📷</div>
+          <span class="text-[10px] bg-amber-100 text-amber-800 font-bold px-2 py-0.5 rounded">Best Seller</span>
+          <h3 class="font-bold text-slate-900 mt-2 text-sm leading-snug">4K Ultra HD AI Security Camera Kit (4 Cameras)</h3>
+          <p class="text-xs text-gray-500 mt-1">Night vision, human detection, 1TB NVR.</p>
+        </div>
+        <div class="mt-4 pt-3 border-t border-gray-100 flex items-center justify-between">
+          <span class="text-lg font-black text-amber-600">$349.00</span>
+          <button onclick="addToCart('4K Ultra HD Security Kit', 349)" class="bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold px-3 py-1.5 rounded-lg text-xs transition">Buy Now</button>
+        </div>
+      </div>
+
+      <!-- Item 2 -->
+      <div class="bg-white border border-gray-200 rounded-xl p-4 flex flex-col justify-between shadow-sm hover:shadow-md transition">
+        <div>
+          <div class="bg-gray-100 h-40 rounded-lg flex items-center justify-center text-4xl mb-4">🔐</div>
+          <span class="text-[10px] bg-blue-100 text-blue-800 font-bold px-2 py-0.5 rounded">Top Rated</span>
+          <h3 class="font-bold text-slate-900 mt-2 text-sm leading-snug">Biometric Smart Deadbolt Fingerprint Lock</h3>
+          <p class="text-xs text-gray-500 mt-1">App remote unlock & RFID keys.</p>
+        </div>
+        <div class="mt-4 pt-3 border-t border-gray-100 flex items-center justify-between">
+          <span class="text-lg font-black text-amber-600">$189.00</span>
+          <button onclick="addToCart('Biometric Smart Deadbolt Lock', 189)" class="bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold px-3 py-1.5 rounded-lg text-xs transition">Buy Now</button>
+        </div>
+      </div>
+
+      <!-- Item 3 -->
+      <div class="bg-white border border-gray-200 rounded-xl p-4 flex flex-col justify-between shadow-sm hover:shadow-md transition">
+        <div>
+          <div class="bg-gray-100 h-40 rounded-lg flex items-center justify-center text-4xl mb-4">🚨</div>
+          <span class="text-[10px] bg-green-100 text-green-800 font-bold px-2 py-0.5 rounded">In Stock</span>
+          <h3 class="font-bold text-slate-900 mt-2 text-sm leading-snug">Wireless Smart Alarm System Hub</h3>
+          <p class="text-xs text-gray-500 mt-1">Motion sensors & 110dB siren.</p>
+        </div>
+        <div class="mt-4 pt-3 border-t border-gray-100 flex items-center justify-between">
+          <span class="text-lg font-black text-amber-600">$229.00</span>
+          <button onclick="addToCart('Wireless Smart Alarm System Hub', 229)" class="bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold px-3 py-1.5 rounded-lg text-xs transition">Buy Now</button>
+        </div>
+      </div>
+
+      <!-- Item 4 -->
+      <div class="bg-white border border-gray-200 rounded-xl p-4 flex flex-col justify-between shadow-sm hover:shadow-md transition">
+        <div>
+          <div class="bg-gray-100 h-40 rounded-lg flex items-center justify-center text-4xl mb-4">💼</div>
+          <span class="text-[10px] bg-purple-100 text-purple-800 font-bold px-2 py-0.5 rounded">Heavy Duty</span>
+          <h3 class="font-bold text-slate-900 mt-2 text-sm leading-snug">Fireproof Digital Security Safe Box</h3>
+          <p class="text-xs text-gray-500 mt-1">Digital keypad & emergency keys.</p>
+        </div>
+        <div class="mt-4 pt-3 border-t border-gray-100 flex items-center justify-between">
+          <span class="text-lg font-black text-amber-600">$149.00</span>
+          <button onclick="addToCart('Fireproof Digital Security Safe Box', 149)" class="bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold px-3 py-1.5 rounded-lg text-xs transition">Buy Now</button>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-slate-900 text-gray-400 py-10 px-4 text-center text-xs">
+    <p>&copy; 2026 SecurMarket E-Commerce. Fast delivery & secure payment options available.</p>
+  </footer>
+
+  <script>
+    let cart = [];
+    function addToCart(name, price) {
+      cart.push({ name, price });
+      document.getElementById('cartCount').innerText = cart.length;
+      alert(`Successfully added "${name}" to your cart!`);
+    }
+    function toggleCart() {
+      if (cart.length === 0) {
+        alert("Your shopping cart is currently empty.");
+        return;
+      }
+      let summary = cart.map((item, index) => `${index + 1}. ${item.name} - $${item.price}`).join('\n');
+      let total = cart.reduce((sum, item) => sum + item.price, 0);
+      alert(`--- SHOPPING CART ---\n\n${summary}\n\nTotal: $${total}.00\n\nReady for secure checkout!`);
+    }
+  </script>
+
+</body>
+</html>
